@@ -7,20 +7,24 @@ import '../../../../core/theming/colors.dart';
 
 class CustomHorizentalItem extends StatelessWidget {
   const CustomHorizentalItem({
-    super.key, required this.title, required this.price, this.oldPrice,required this.image, required this.containerHeight, required this.containerWidth, required this.imageHeight,
+    super.key,
+    required this.title,
+    required this.price,
+    this.oldPrice,
+    required this.image,
+    required this.containerWidth,
+    required this.imageHeight,
   });
-final String title;
-final String price;
-final String? oldPrice;
-final String image;
-final double containerHeight;
-final double containerWidth;
-final double imageHeight;
+  final String title;
+  final String price;
+  final String? oldPrice;
+  final String image;
+  final double containerWidth;
+  final double imageHeight;
   @override
   Widget build(BuildContext context) {
     return Container(
-      height:containerHeight,
-      width:containerWidth,
+      width: containerWidth,
       decoration: const BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.only(
@@ -30,37 +34,41 @@ final double imageHeight;
         children: [
           Image.asset(
             image,
-            height:imageHeight,
+            height: imageHeight,
             width: double.infinity,
             fit: BoxFit.cover,
           ),
-          verticalSpace(38.h),
+          verticalSpace(35.h),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                 Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      title,
-                      style: Styles.font12BlackWeight500,
+                    Expanded(
+                      child: Text(
+                        title,
+                        style: Styles.font12BlackWeight500,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                      ),
                     ),
-                   const Icon(
+                    const Icon(
                       FontAwesomeIcons.heart,
                       color: lightBrown,
                       size: 16,
                     )
                   ],
                 ),
-                verticalSpace(26.h),
-                 Text(
+                verticalSpace(22.h),
+                Text(
                   price,
                   style: Styles.font12LightBrownkWeight500,
                 ),
                 Text(
-                  oldPrice??'',
+                  oldPrice ?? '',
                   style: Styles.font9BlueBlackWeight400.copyWith(
                       color: lightGrey, decoration: TextDecoration.lineThrough),
                 )

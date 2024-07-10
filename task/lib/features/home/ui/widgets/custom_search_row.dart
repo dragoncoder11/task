@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:task/core/helper/spacing.dart';
 
 import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/styles.dart';
@@ -18,8 +19,8 @@ class CustomSearchRow extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(left: 16),
           child: Container(
-            height: 90.h,
-            width: 284.w,
+            height: verticalQuery(context, .09),
+            width: horizentalQuery(context, .72),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(2),

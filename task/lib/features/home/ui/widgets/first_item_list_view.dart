@@ -27,7 +27,7 @@ class FirstItemListView extends StatelessWidget {
         price: ' 400.00',
         oldPrice: ' 412.00',
         image: 'assets/pic1.png'),
-        ItemModel(
+    ItemModel(
         title: 'Wood',
         price: ' 400.00',
         oldPrice: ' 412.00',
@@ -35,23 +35,24 @@ class FirstItemListView extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 360.h,
-      child: Padding(
-        padding: EdgeInsets.only(right: 10.w),
+    return Padding(
+      padding: EdgeInsets.only(right: 10.w),
+      child: SizedBox(
+        height: 384.h,
         child: ListView.builder(
-          physics: const BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             scrollDirection: Axis.horizontal,
             itemCount: itemList.length,
             itemBuilder: (context, index) {
               return Padding(
-                padding: EdgeInsets.only(right: 5.w,),
+                padding: EdgeInsets.only(
+                  right: 5.w,
+                ),
                 child: CustomHorizentalItem(
                   image: itemList[index].image,
                   title: itemList[index].title,
                   price: itemList[index].price,
                   oldPrice: itemList[index].oldPrice!,
-                  containerHeight: 350.h,
                   containerWidth: 120.w,
                   imageHeight: 200.h,
                 ),

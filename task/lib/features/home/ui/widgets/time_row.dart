@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:task/core/theming/colors.dart';
 import 'package:task/core/theming/styles.dart';
@@ -23,14 +22,12 @@ class TimeRow extends StatelessWidget {
             ),
             const CustomTimeCard(time: '22'),
             const Text(":",
-                style: TextStyle(
-                    color: lightBrown,
-                    fontWeight: FontWeight.bold)),
+                style:
+                    TextStyle(color: lightBrown, fontWeight: FontWeight.bold)),
             const CustomTimeCard(time: '22'),
             const Text(":",
-                style: TextStyle(
-                    color: lightBrown,
-                    fontWeight: FontWeight.bold)),
+                style:
+                    TextStyle(color: lightBrown, fontWeight: FontWeight.bold)),
             const CustomTimeCard(time: '22'),
           ],
         ),

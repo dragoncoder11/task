@@ -8,28 +8,18 @@ class SecondItemListView extends StatelessWidget {
   SecondItemListView({super.key});
   final List<ItemModel> itemList = [
     ItemModel(
-        title: 'Pink Bag',
-        price: '234.90',
-        image: 'assets/Rectangle 2.png'),
+        title: 'Pink Bag', price: '234.90', image: 'assets/Rectangle 2.png'),
     ItemModel(
-        title: 'Brown candy',
-        price: ' 500',
-        image: 'assets/Rectangle 1.png'),
-    ItemModel(
-        title: 'Offwhite ',
-        price: '344.89',
-        image: 'assets/pic2.png'),
-    ItemModel(
-        title: 'title',
-        price: ' 400.00',
-        image: 'assets/pic1.png'),
+        title: 'Brown candy', price: ' 500', image: 'assets/Rectangle 1.png'),
+    ItemModel(title: 'Offwhite ', price: '344.89', image: 'assets/pic2.png'),
+    ItemModel(title: 'title', price: ' 400.00', image: 'assets/pic1.png'),
   ];
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 380.h,
+      height: 382.h,
       child: ListView.builder(
-        physics: const BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           scrollDirection: Axis.horizontal,
           itemCount: itemList.length,
           itemBuilder: (context, index) {
@@ -39,7 +29,6 @@ class SecondItemListView extends StatelessWidget {
                 image: itemList[index].image,
                 title: itemList[index].title,
                 price: itemList[index].price,
-                containerHeight: 380.h,
                 containerWidth: 140.w,
                 imageHeight: 230.h,
               ),
