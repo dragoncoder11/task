@@ -34,7 +34,7 @@ final double imageHeight;
             width: double.infinity,
             fit: BoxFit.cover,
           ),
-          verticalSpace(40.h),
+          verticalSpace(38.h),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10),
             child: Column(
@@ -54,7 +54,7 @@ final double imageHeight;
                     )
                   ],
                 ),
-                verticalSpace(30.h),
+                verticalSpace(26.h),
                  Text(
                   price,
                   style: Styles.font12LightBrownkWeight500,

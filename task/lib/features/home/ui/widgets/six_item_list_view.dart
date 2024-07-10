@@ -7,15 +7,15 @@ class SixItemListView extends StatelessWidget {
   SixItemListView({super.key});
   final List<ItemModel> itemList = [
     ItemModel(
-        title: 'Shawl',
+        title: 'website Design',
         price: '234.90',
-        image: 'assets/Rectangle 3.png'),
+        image: 'assets/Rectangle 10.png'),
     ItemModel(
-        title: 'Cardigan',
+        title: 'Development',
         price: ' 500',
-        image: 'assets/Rectangle 4.png'),
+        image: 'assets/Rectangle 11.png'),
     ItemModel(
-        title: 'Blouse ',
+        title: 'Graghic Design ',
         price: '344.89',
         image: 'assets/pic2.png'),
     ItemModel(
@@ -40,7 +40,7 @@ class SixItemListView extends StatelessWidget {
                 price: itemList[index].price,
                 containerHeight: 384.h,
                 containerWidth: 142.w,
-                imageHeight: 245.h,
+                imageHeight: 250.h,
               ),
             );
           }),

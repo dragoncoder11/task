@@ -3,19 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task/core/helper/spacing.dart';
-import 'package:task/core/theming/colors.dart';
 import 'package:task/core/theming/styles.dart';
-import 'package:task/features/home/ui/widgets/custom_see_all_row.dart';
-import 'package:task/features/home/ui/widgets/custom_time_card.dart';
-import 'package:task/features/home/ui/widgets/fifth_item_list_view.dart';
+import 'package:task/features/home/ui/widgets/custom_grouped_list_view.dart';
 import 'package:task/features/home/ui/widgets/first_item_list_view.dart';
-import 'package:task/features/home/ui/widgets/fourth_item_list_view.dart';
-import 'package:task/features/home/ui/widgets/second_item_list_view.dart';
-import 'package:task/features/home/ui/widgets/six_item_list_view.dart';
-import 'package:task/features/home/ui/widgets/third_item_list_view.dart';
 import 'package:task/features/home/ui/widgets/upcoming_first_item.dart';
 import 'package:task/features/home/ui/widgets/upcoming_second_item.dart';
 import 'custom_search_row.dart';
+import 'time_row.dart';
 
 class ShopScreenBody extends StatelessWidget {
   const ShopScreenBody({super.key});
@@ -38,34 +32,7 @@ class ShopScreenBody extends StatelessWidget {
               verticalSpace(40.h),
               Padding(
                 padding: EdgeInsets.only(left: 16.w, right: 18.w),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        Text(
-                          'Discount ends in',
-                          style: Styles.font12BlackWeight500,
-                        ),
-                        const CustomTimeCard(time: '22'),
-                        const Text(":",
-                            style: TextStyle(
-                                color: lightBrown,
-                                fontWeight: FontWeight.bold)),
-                        const CustomTimeCard(time: '22'),
-                        const Text(":",
-                            style: TextStyle(
-                                color: lightBrown,
-                                fontWeight: FontWeight.bold)),
-                        const CustomTimeCard(time: '22'),
-                      ],
-                    ),
-                    Text(
-                      'See all',
-                      style: Styles.font12LightBrownkWeight500,
-                    )
-                  ],
-                ),
+                child: const TimeRow(),
               ),
               verticalSpace(40.h),
               FirstItemListView(),
@@ -106,29 +73,7 @@ class ShopScreenBody extends StatelessWidget {
                         ],
                       ),
                     ),
-                    verticalSpace(50.h),
-                    const CustomSeeAllRow(title: 'New in Bags & watches'),
-                    verticalSpace(50.h),
-                    SecondItemListView(),
-                    verticalSpace(50.h),
-                    const CustomSeeAllRow(
-                      title: 'New in Crochet Clothes',
-                    ),
-                    verticalSpace(50.h),
-                    ThirdItemListView(),
-                    verticalSpace(50.h),
-                    const CustomSeeAllRow(title: 'New in Antiqes & Ceramic'),
-                    verticalSpace(50.h),
-                    FourthItemListView(),
-                    verticalSpace(50.h),
-                    const CustomSeeAllRow(
-                        title: 'New in Wedding &  Social events '),
-                    verticalSpace(50.h),
-                    FifthItemListView(),
-                    verticalSpace(50.h),
-                    const CustomSeeAllRow(title: 'Software Services'),
-                    verticalSpace(50.h),
-                    SixItemListView(),
+                    const CustomGroupedListView()
                   ],
                 ),
               ),

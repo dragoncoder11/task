@@ -7,15 +7,15 @@ class FourthItemListView extends StatelessWidget {
   FourthItemListView({super.key});
   final List<ItemModel> itemList = [
     ItemModel(
-        title: 'Shawl',
+        title: 'Resin',
         price: '234.90',
-        image: 'assets/Rectangle 3.png'),
+        image: 'assets/Rectangle 6.png'),
     ItemModel(
-        title: 'Cardigan',
+        title: 'Pottery',
         price: ' 500',
-        image: 'assets/Rectangle 4.png'),
+        image: 'assets/Rectangle 7.png'),
     ItemModel(
-        title: 'Blouse ',
+        title: 'Pottery Clay ',
         price: '344.89',
         image: 'assets/pic2.png'),
     ItemModel(
@@ -38,7 +38,7 @@ class FourthItemListView extends StatelessWidget {
                 image: itemList[index].image,
                 title: itemList[index].title,
                 price: itemList[index].price,
-                containerHeight: 384.h,
+                containerHeight: 390.h,
                 containerWidth: 142.w,
                 imageHeight: 245.h,
               ),
