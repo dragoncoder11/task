@@ -3,22 +3,24 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:task/core/helper/spacing.dart';
 import 'package:task/core/theming/styles.dart';
-
 import '../../../../core/theming/colors.dart';
 
-class FirstHorizentalItem extends StatelessWidget {
-  const FirstHorizentalItem({
-    super.key, required this.title, required this.price, required this.oldPrice,required this.image,
+class CustomHorizentalItem extends StatelessWidget {
+  const CustomHorizentalItem({
+    super.key, required this.title, required this.price, this.oldPrice,required this.image, required this.containerHeight, required this.containerWidth, required this.imageHeight,
   });
 final String title;
 final String price;
-final String oldPrice;
+final String? oldPrice;
 final String image;
+final double containerHeight;
+final double containerWidth;
+final double imageHeight;
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 350.h,
-      width: 120.w,
+      height:containerHeight,
+      width:containerWidth,
       decoration: const BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.only(
@@ -28,7 +30,7 @@ final String image;
         children: [
           Image.asset(
             image,
-            height: 200.h,
+            height:imageHeight,
             width: double.infinity,
             fit: BoxFit.cover,
           ),
@@ -52,13 +54,13 @@ final String image;
                     )
                   ],
                 ),
-                verticalSpace(36.h),
+                verticalSpace(30.h),
                  Text(
                   price,
                   style: Styles.font12LightBrownkWeight500,
                 ),
                 Text(
-                  oldPrice,
+                  oldPrice??'',
                   style: Styles.font9BlueBlackWeight400.copyWith(
                       color: lightGrey, decoration: TextDecoration.lineThrough),
                 )

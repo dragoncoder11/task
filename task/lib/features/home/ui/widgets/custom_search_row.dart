@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -37,7 +36,7 @@ class CustomSearchRow extends StatelessWidget {
                 ),
                 Padding(
                   padding: EdgeInsets.fromLTRB(0, 6.h, 0, 11.h),
-                  child: const Text(
+                  child: Text(
                     'Search what you need',
                     style: Styles.font13LightGreyWeight400,
                   ),
